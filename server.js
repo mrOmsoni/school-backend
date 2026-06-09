@@ -16,7 +16,11 @@ connectDB()
 const app = express()
 
 app.use(cors({
-  origin: process.env.CLIENT_URL || '*',
+  origin: [
+    'https://school-frontend-plum-ten.vercel.app',
+    'https://school-frontend-ma8s7x37r-om-sonis-projects-5a1c5a99.vercel.app',
+    'http://localhost:5173'
+  ],
   credentials: true,
 }))
 app.use(express.json())
